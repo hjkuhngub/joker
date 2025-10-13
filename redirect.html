@@ -5,25 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Redirecting...</title>
 <script>
-// Get full URL of current page
+// Target panel URL (the one to redirect from)
+const panelURL = "https://watchsports.to/?sport=wwe&game=1013-1";
+
+// Current full URL
 const currentURL = window.location.href;
 
-// Target URL on your domain
-const myDomainRedirect = "https://jokerlivestreams.sbs";
-
-// Check if current URL matches exactly the panel link
-const targetPanelURL = "https://watchsports.to/?sport=wwe&game=1013-1";
-
-// Simple redirect
-if(currentURL === targetPanelURL){
-    window.location.href = myDomainRedirect;
+// If someone is on the panel URL, redirect to your domain
+if(currentURL === panelURL){
+    window.location.href = "https://jokerlivestreams.sbs";
 } else {
-    // Otherwise do nothing or show message
-    console.log("No redirect, URL does not match.");
+    // Otherwise, you can show the link or message
+    console.log("No redirect needed");
 }
 </script>
 </head>
 <body style="background:#111;color:#fff;display:flex;justify-content:center;align-items:center;height:100vh;font-family:sans-serif;text-align:center;">
 <p>Redirecting to Joker Live Streams...</p>
+<p>If you are not redirected automatically, click <a href="https://jokerlivestreams.sbs" style="color:#f00;">here</a>.</p>
 </body>
 </html>
