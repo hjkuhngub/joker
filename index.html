@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jokerlivestreams</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #eee;
+            text-align: center;
+            padding: 50px;
+        }
+        .notice {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+    </style>
+    <script>
+        // URL check karenge
+        const currentUrl = window.location.href;
+
+        // Agar URL mein watchsports.to aur specific NFL game hai
+        if (currentUrl.includes("watchsports.to") && currentUrl.includes("sport=nfl") && currentUrl.includes("game=401772941")) {
+            // Redirect karenge apni site pe
+            window.location.href = "https://jokerlivestreams.sbs";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Welcome to Jokerlivestreams</h1>
+    <p>Your favorite sports streams in one place!</p>
+    <div class="notice">
+        If you came here from the NFL match on WatchSports, you will be redirected shortly.
+    </div>
+</body>
+
+</html>
